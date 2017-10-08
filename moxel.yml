@@ -1,0 +1,10 @@
+name: ci-sum-array
+tag: latest
+image: python2    # Docker environment to run the model with.
+input_space:            # Input type annotations.
+  data: array
+output_space:           # Output type annotations.
+  sum: float
+main:                   # Main entrypoint to serve the model.
+  type: python  
+  entrypoint: serve.py::predict           
